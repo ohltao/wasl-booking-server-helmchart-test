@@ -17,6 +17,23 @@ resources:
     cpu: "100m"
     memory: "128Mi"
 
+ingress:
+  enabled: true
+  className: ingress-controller-stage-svc-naver-innovation
+  host: booking-test.naver-innovation.net
+  tls: false
+  annotations:
+    oci-native-ingress.oraclecloud.com/backend-tls-enabled: "false"
+    oci-native-ingress.oraclecloud.com/healthcheck-path: "/"
+    oci-native-ingress.oraclecloud.com/healthcheck-port: "80"
+    oci-native-ingress.oraclecloud.com/healthcheck-protocol: "HTTP"
+    oci-native-ingress.oraclecloud.com/healthcheck-retries: "3"
+    oci-native-ingress.oraclecloud.com/healthcheck-return-code: "200"
+    oci-native-ingress.oraclecloud.com/healthcheck-interval-milliseconds: "10000"
+    oci-native-ingress.oraclecloud.com/healthcheck-timeout-milliseconds: "3000"
+    oci-native-ingress.oraclecloud.com/http-listener-port: "80"
+    oci-native-ingress.oraclecloud.com/is-private: "true"
+
 nodeSelector: {}
 tolerations: []
 affinity: {}
