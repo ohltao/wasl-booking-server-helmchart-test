@@ -1,8 +1,8 @@
 replicaCount: 1
 
 image:
-  repository: nginxdemos/hello
-  tag: "latest"
+  repository: docker.io/nginxdemos/hello
+  tag: "plain-text"
   pullPolicy: IfNotPresent
 
 service:
