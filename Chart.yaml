@@ -1,0 +1,6 @@
+apiVersion: v2
+name: booking-helm-test
+description: A simple test chart to verify ArgoCD deployment pipeline
+type: application
+version: 0.1.0
+appVersion: "1.0.0"
